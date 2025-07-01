@@ -83,8 +83,7 @@ Desarrollado por aprendices del SENA:
 - **Jeison Noreña Monsalve**  
 - **Carlos Velásquez**  
 - **Georgette Osuna**  
-- **Jhonatan Sebastián Serna Ramírez**  
-- **Juan Camilo Carmona García**
+
 
 ---
 
