@@ -1,6 +1,14 @@
 # 📦 Sistema de Inventario Almacén CTGI
 
-**Repositorio:** [https://github.com/Jeisonnore/inventario-almacen-ctgi.git](https://github.com/Jeisonnore/inventario-almacen-ctgi.git)
+
+**Repositorio en GitHub:**  
+🔗 [https://github.com/Jeisonnore/inventario-almacen-ctgi.git](https://github.com/Jeisonnore/inventario-almacen-ctgi.git)
+
+**Versión en línea (Hostinger):**  
+🌐 [https://gold-zebra-473949.hostingersite.com/](https://gold-zebra-473949.hostingersite.com/)
+
+**Demo en GitHub Pages (solo frontend):**  
+🧪 [https://jeisonnore.github.io/inventario-almacen-ctgi/](https://jeisonnore.github.io/inventario-almacen-ctgi/)
 
 ---
 
