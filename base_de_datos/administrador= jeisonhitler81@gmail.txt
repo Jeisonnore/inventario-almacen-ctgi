@@ -1,0 +1,2 @@
+administrador= jeisonhitler81@gmail.com
+clave=Control21
