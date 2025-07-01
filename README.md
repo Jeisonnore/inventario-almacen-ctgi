@@ -8,7 +8,7 @@
 🌐 [https://gold-zebra-473949.hostingersite.com/](https://gold-zebra-473949.hostingersite.com/)
 
 **Demo en GitHub Pages (solo frontend):**  
-🧪 [[https://jeisonnore.github.io/inventario-almacen-ctgi/]
+🧪 https://jeisonnore.github.io/inventario-almacen-ctgi/
 
 ---
 
