@@ -6,7 +6,9 @@
 
 ## 🎯 Descripción
 
-Sistema web para la **gestión integral de inventario y préstamos** en el Centro de Tecnologías para la Gestión Industrial (CTGI) del SENA. Facilita el control de equipos, materiales, usuarios y procesos asociados mediante una interfaz moderna y eficiente.
+Sistema web desarrollado como proyecto formativo del SENA para el control de inventario del **Centro Textil y de Gestión Industrial (CTGI)**.  
+Permite administrar de forma centralizada el préstamo, devolución y seguimiento de equipos, materiales, ambientes, instructores y novedades técnicas.
+
 
 ---
 
