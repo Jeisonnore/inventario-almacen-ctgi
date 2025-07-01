@@ -1,0 +1,304 @@
+:root {
+    --bg-light: #f0f4f8;
+    --bg-dark: #1e1e2f;
+    --text-dark: #1e1e2f;
+    --text-light: #ffffff;
+    --card-bg-light: #ffffff;
+    --card-bg-dark: #2b2b3c;
+    --sidebar-bg-light: #ffffff;
+    --sidebar-bg-dark: #2a2a3b;
+    --border-dark: #44475a;
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.container-fluid {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+}
+
+.sidebar {
+    width: 92px;
+    background-color: var(--sidebar-bg-light);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 24px;
+    transition: width 0.4s ease, background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+body.dark .sidebar {
+    background-color: var(--sidebar-bg-dark);
+}
+
+.sidebar:hover {
+    width: 256px;
+    align-items: flex-start;
+}
+
+.animated-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: width 0.4s ease, height 0.4s ease;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+@keyframes logoBounce {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.sidebar:hover .animated-logo {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: 0 auto 20px auto;
+    animation: logoBounce 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.head {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f6f6f6;
+    width: 100%;
+}
+
+body.dark .head {
+    border-color: var(--border-dark);
+}
+
+.user-details {
+    display: none;
+    text-align: center;
+}
+
+.sidebar:hover .user-details {
+    display: block;
+}
+
+.user-details .title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.menu ul {
+    list-style: none;
+    margin-bottom: 5px;
+    width: 100%;
+    padding-left: 0;
+}
+
+.menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #757575;
+    text-decoration: none;
+    padding: 12px 8px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+body.dark .menu ul li a {
+    color: #a0a0a0;
+}
+
+.menu ul li.active a,
+.menu ul li a:hover {
+    color: #000;
+    background-color: #f6f6f6;
+}
+
+body.dark .menu ul li.active a,
+body.dark .menu ul li a:hover {
+    color: #fff;
+    background-color: #3f3f52;
+}
+
+.icon {
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+
+.text {
+    display: none;
+    white-space: nowrap;
+}
+
+.sidebar:hover .text {
+    display: inline;
+}
+
+.main {
+    flex: 1;
+    padding: 25px;
+    transition: background-color 0.3s;
+    position: relative;
+    overflow-y: auto;
+}
+
+.toggle-mode-icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1050;
+}
+
+.card-form {
+    background-color: var(--card-bg-light);
+    transition: background-color 0.3s ease;
+}
+
+/* ===== ESTILOS PARA MODO OSCURO (REFORZADOS CON !IMPORTANT) ===== */
+body.dark .card-form {
+    background-color: var(--card-bg-dark) !important;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+    color: var(--text-light) !important;
+}
+
+body.dark label {
+    color: var(--text-light) !important;
+}
+
+body.dark .form-control,
+body.dark .form-select,
+body.dark .select2-container--bootstrap-5 .select2-selection {
+    background-color: var(--card-bg-dark) !important;
+    color: var(--text-light) !important;
+    border-color: var(--border-dark) !important;
+}
+
+body.dark .select2-container--bootstrap-5 .select2-selection--single .select2-selection__rendered {
+    color: var(--text-light) !important;
+}
+
+body.dark .form-control::placeholder {
+    color: #888 !important;
+}
+
+body.dark hr {
+    border-color: var(--border-dark) !important;
+}
+
+body.dark .select2-dropdown {
+    background-color: var(--card-bg-dark) !important;
+    border-color: var(--border-dark) !important;
+}
+
+body.dark .select2-container--bootstrap-5 .select2-dropdown .select2-results__option {
+    color: var(--text-light) !important;
+}
+
+body.dark .select2-container--bootstrap-5 .select2-dropdown .select2-results__option--highlighted {
+    background-color: #3f3f52 !important;
+}
+
+body.dark .table {
+    --bs-table-color: var(--text-light) !important;
+    --bs-table-bg: transparent !important;
+    --bs-table-border-color: var(--border-dark) !important;
+    --bs-table-striped-color: var(--text-light) !important;
+    --bs-table-striped-bg: rgba(255, 255, 255, 0.05) !important;
+    --bs-table-hover-color: var(--text-light) !important;
+    --bs-table-hover-bg: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark .table-hover>tbody>tr:hover>* {
+    color: var(--text-light) !important;
+}
+
+body.dark .dataTables_wrapper,
+body.dark .dataTables_length,
+body.dark .dataTables_filter,
+body.dark .dataTables_info,
+body.dark .dataTables_paginate {
+    color: var(--text-light) !important;
+}
+
+body.dark .dataTables_length select {
+    background-color: var(--card-bg-dark) !important;
+    color: var(--text-light) !important;
+}
+
+body.dark .dataTables_filter input {
+    background-color: var(--card-bg-dark) !important;
+    color: var(--text-light) !important;
+}
+
+body.dark .dataTables_paginate .paginate_button {
+    color: var(--text-light) !important;
+    background: transparent !important;
+    border-color: var(--border-dark) !important;
+}
+
+body.dark .dataTables_paginate .paginate_button:hover {
+    background: #3f3f52 !important;
+    border-color: var(--border-dark) !important;
+}
+
+body.dark .dataTables_paginate .paginate_button.current,
+body.dark .dataTables_paginate .paginate_button.current:hover {
+    color: #fff !important;
+    background: #0d6efd !important;
+    border-color: #0d6efd !important;
+}
+
+body.dark .dataTables_paginate .paginate_button.disabled {
+    color: #6c757d !important;
+}
+
+/* SweetAlert2 Dark Theme Integration */
+body.dark .swal2-popup {
+    background-color: var(--card-bg-dark) !important;
+    color: var(--text-light) !important;
+}
+
+body.dark .swal2-title {
+    color: var(--text-light) !important;
+}
+
+body.dark .swal2-html-container {
+    color: var(--text-light) !important;
+}

@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+/* Estilos para el encabezado principal */
+header {
+    background: #0f8000e2; /* Fondo verde */
+    color: white;          /* Texto blanco */
+    padding: 20px;         /* Espaciado interno */
+    text-align: center;    /* Centrar texto */
+    font-size: 24px;       /* Tamaño de fuente grande */
+}
+
+/* Estilos generales del body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Barra de navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #11171ddb;
+    padding: 10px 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+nav a:hover {
+    background: #003366;
+    border-radius: 5px;
+}
+
+/* Contenedor principal con dos columnas */
+.container {
+    max-width: 1200px; /* Aumenté el ancho para acomodar dos columnas */
+    margin: 40px auto;
+    display: flex;
+    gap: 20px;
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Noticias y notificaciones */
+.news-notifications {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.news-notifications h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #0f8000e2;
+}
+.news-notifications ul {
+    list-style: none;
+    padding: 0;
+}
+.news-notifications ul li {
+    margin: 15px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 4px solid #0f8000e2;
+    border-radius: 5px;
+}
+.news-notifications ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.news-notifications ul li a:hover {
+    color: #0f8000e2;
+}
+
+/* Pie de página */
+footer {
+    background: #0f8000e2;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Usuario conectado */
+.usuario-conectado {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin: 20px auto 10px;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.usuario-conectado i {
+    color: #f1c40f;
+}
+.usuario-conectado span {
+    font-weight: normal;
+    color: #bdc3c7;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background: #11171ddb;
+    padding: 10px 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+nav a:hover {
+    background: #003366;
+    border-radius: 5px;
+}
+.container {
+    max-width: 1200px; /* Aumenté el ancho para acomodar dos columnas */
+    margin: 40px auto;
+    display: flex;
+    gap: 20px;
+}
+.welcome-section {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.news-notifications {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.news-notifications h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #0f8000e2;
+}
+.news-notifications ul {
+    list-style: none;
+    padding: 0;
+}
+.news-notifications ul li {
+    margin: 15px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 4px solid #0f8000e2;
+    border-radius: 5px;
+}
+.news-notifications ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.news-notifications ul li a:hover {
+    color: #0f8000e2;
+}
+footer {
+    background: #0f8000e2;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.usuario-conectado {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin: 20px auto 10px;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.usuario-conectado i {
+    color: #f1c40f;
+}
+.usuario-conectado span {
+    font-weight: normal;
+    color: #bdc3c7;
+}
+

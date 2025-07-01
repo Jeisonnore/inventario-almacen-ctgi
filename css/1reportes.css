@@ -1,0 +1,183 @@
+/* Estilos generales para los reportes */
+body {
+    /* Fuente y fondo general */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contenedor principal del reporte */
+.reporte-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Título principal */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Filtros de búsqueda */
+.filtros {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Espaciado entre grupos de formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Etiquetas de los campos */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #495057;
+}
+
+/* Inputs y selects */
+select, input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Botón principal */
+.btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+/* Botón principal al pasar el mouse */
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Botón de exportar */
+.btn-export {
+    background-color: #27ae60;
+    margin-right: 10px;
+}
+
+/* Botón de exportar al pasar el mouse */
+.btn-export:hover {
+    background-color: #219653;
+}
+
+/* Contenedor para tablas con scroll horizontal */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Tabla de datos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Celdas de la tabla */
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Encabezado de la tabla */
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+/* Fila resaltada al pasar el mouse */
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Estado activo (verde) */
+.estado-activo {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+/* Estado inactivo (rojo) */
+.estado-inactivo {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Estado disponible (verde) */
+.estado-disponible {
+    color: #27ae60;
+}
+
+/* Estado prestado (naranja) */
+.estado-prestado {
+    color: #f39c12;
+}
+
+/* Estado deteriorado (rojo) */
+.estado-deteriorado {
+    color: #e74c3c;
+}
+
+/* Paginación de la tabla */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Enlaces de la paginación */
+.pagination a {
+    color: #3498db;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+/* Enlace activo de la paginación */
+.pagination a.active {
+    background-color: #3498db;
+    color: white;
+    border: 1px solid #3498db;
+}
+
+/* Enlace de paginación al pasar el mouse */
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+/* Contenedor de acciones (botones) */
+.acciones {
+    display: flex;
+    gap: 10px;
+}
+
+/* Mensaje cuando no hay resultados */
+.no-results {
+    text-align: center;
+    padding: 20px;
+    color: #7f8c8d;
+    font-style: italic;
+}

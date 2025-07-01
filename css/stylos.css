@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    background-color: #f0f2f5; /* Fondo de respaldo */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/SENA_Colombia_logo.svg/1024px-SENA_Colombia_logo.svg.png'),
+                      url('https://www.scmlogistica.es/wp-content/uploads/soluciones-flexibles-almacen.jpg');
+    background-size: 120px, cover; /* Logo del SENA pequeño, imagen de fondo */
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.blur-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Oscurece un poco el fondo */
+    z-index: -1;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 15px;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.3); /* Más transparente */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /* Hace que se vea el fondo */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #020202; /* Texto oscuro para mejor contraste */
+}
+
+.logo-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.animated-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.5); /* Borde semi-transparente */
+    margin-bottom: 15px;
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.8; /* Hace el logo más transparente */
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.6); /* Fondo más transparente */
+    border: 1px solid rgba(255, 255, 255, 0.4) !important; /* Borde semi-transparente */
+    border-radius: 30px;
+    color: #333; /* Texto oscuro */
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    border-color: #4a90e2 !important;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+}
+
+.form-control::placeholder {
+    color: rgba(0, 0, 0, 0.6); /* Placeholder más visible */
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    background: #1ef307; /* Verde sólido */
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    background: #03b60c; /* Verde más oscuro al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-links a {
+    color: #060606; /* Azul para mejor visibilidad */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-links a:hover {
+    color: #3a7bc8;
+    text-decoration: underline;
+}

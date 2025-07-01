@@ -1,0 +1,352 @@
+/* Variables de colores y temas */
+:root {
+    --bg-light: #f0f4f8;
+    --bg-dark: #1e1e2f;
+    --text-dark: #1e1e2f;
+    --text-light: #ffffff;
+    --card-bg-light: #ffffff;
+    --card-bg-dark: #2b2b3c;
+    --sidebar-bg-light: #ffffff;
+    --sidebar-bg-dark: #2a2a3b;
+    --border-dark: #44475a;
+}
+
+/* Transición suave para fondo y color de texto */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tema claro */
+body.light {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Tema oscuro */
+body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* Reset y fuente global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* Contenedor principal en flex para sidebar y contenido */
+.container-fluid {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+}
+
+/* Sidebar lateral */
+.sidebar {
+    width: 92px;
+    background-color: var(--sidebar-bg-light);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 24px;
+    transition: width 0.4s ease, background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Sidebar en modo oscuro */
+body.dark .sidebar {
+    background-color: var(--sidebar-bg-dark);
+}
+
+/* Sidebar expandido al hacer hover */
+.sidebar:hover {
+    width: 256px;
+    align-items: flex-start;
+}
+
+/* Logo animado */
+.animated-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: width 0.4s ease, height 0.4s ease;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+/* Animación de rebote para el logo */
+@keyframes logoBounce {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Logo más grande y animado al expandir sidebar */
+.sidebar:hover .animated-logo {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: 0 auto 20px auto;
+    animation: logoBounce 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Encabezado del sidebar */
+.head {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f6f6f6;
+    width: 100%;
+}
+
+/* Encabezado en modo oscuro */
+body.dark .head {
+    border-color: var(--border-dark);
+}
+
+/* Detalles del usuario ocultos por defecto */
+.user-details {
+    display: none;
+    text-align: center;
+}
+
+/* Mostrar detalles del usuario al expandir sidebar */
+.sidebar:hover .user-details {
+    display: block;
+}
+
+/* Título del usuario */
+.user-details .title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Menú de navegación */
+.menu ul {
+    list-style: none;
+    margin-bottom: 5px;
+    width: 100%;
+    padding-left: 0;
+}
+
+/* Enlaces del menú */
+.menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #757575;
+    text-decoration: none;
+    padding: 12px 8px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+/* Enlaces del menú en modo oscuro */
+body.dark .menu ul li a {
+    color: #a0a0a0;
+}
+
+/* Enlace activo o hover en menú */
+.menu ul li.active a,
+.menu ul li a:hover {
+    color: #000;
+    background-color: #f6f6f6;
+}
+
+/* Enlace activo o hover en menú en modo oscuro */
+body.dark .menu ul li.active a,
+body.dark .menu ul li a:hover {
+    color: #fff;
+    background-color: #3f3f52;
+}
+
+/* Iconos del menú */
+.icon {
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Texto de los enlaces oculto por defecto */
+.text {
+    display: none;
+    white-space: nowrap;
+}
+
+/* Mostrar texto de enlaces al expandir sidebar */
+.sidebar:hover .text {
+    display: inline;
+}
+
+/* Contenido principal */
+.main {
+    flex: 1;
+    padding: 25px;
+    transition: background-color 0.3s;
+    position: relative;
+    overflow-y: auto;
+}
+
+/* Icono para cambiar tema */
+.toggle-mode-icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1050;
+}
+
+/* Tarjeta de formulario */
+.card-form {
+    background-color: var(--card-bg-light);
+    transition: background-color 0.3s ease;
+}
+
+/* ===== ESTILOS PARA MODO OSCURO (REFORZADOS CON !IMPORTANT) ===== */
+
+/* Tarjeta en modo oscuro */
+body.dark .card-form {
+    background-color: var(--card-bg-dark) !important;
+}
+
+/* Títulos en modo oscuro */
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+    color: var(--text-light) !important;
+}
+
+/* Etiquetas en modo oscuro */
+body.dark label {
+    color: var(--text-light) !important;
+}
+
+/* Texto secundario en modo oscuro */
+body.dark .text-muted {
+    color: var(--text-light) !important;
+}
+
+/* Inputs y selects en modo oscuro */
+body.dark .form-control,
+body.dark .form-select,
+body.dark .select2-container--bootstrap-5 .select2-selection {
+    background-color: var(--card-bg-dark) !important;
+    color: var(--text-light) !important;
+    border-color: var(--border-dark) !important;
+}
+
+/* Texto de select2 en modo oscuro */
+body.dark .select2-container--bootstrap-5 .select2-selection--single .select2-selection__rendered {
+    color: var(--text-light) !important;
+}
+
+/* Placeholder en modo oscuro */
+body.dark .form-control::placeholder {
+    color: #888 !important;
+}
+
+/* Línea horizontal en modo oscuro */
+body.dark hr {
+    border-color: var(--border-dark) !important;
+}
+
+/* Dropdown de select2 en modo oscuro */
+body.dark .select2-dropdown {
+    background-color: var(--card-bg-dark) !important;
+    border-color: var(--border-dark) !important;
+}
+
+/* Opciones de select2 en modo oscuro */
+body.dark .select2-container--bootstrap-5 .select2-dropdown .select2-results__option {
+    color: var(--text-light) !important;
+}
+
+/* Opción resaltada de select2 en modo oscuro */
+body.dark .select2-container--bootstrap-5 .select2-dropdown .select2-results__option--highlighted {
+    background-color: #3f3f52 !important;
+}
+
+/* Tablas en modo oscuro */
+body.dark .table {
+    --bs-table-color: var(--text-light) !important;
+    --bs-table-bg: transparent !important;
+    --bs-table-border-color: var(--border-dark) !important;
+    --bs-table-striped-color: var(--text-light) !important;
+    --bs-table-striped-bg: rgba(255, 255, 255, 0.05) !important;
+    --bs-table-hover-color: var(--text-light) !important;
+    --bs-table-hover-bg: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Hover en filas de tabla en modo oscuro */
+body.dark .table-hover>tbody>tr:hover>* {
+    color: var(--text-light) !important;
+}
+
+/* Elementos de datatables en modo oscuro */
+body.dark .dataTables_wrapper,
+body.dark .dataTables_length,
+body.dark .dataTables_filter,
+body.dark .dataTables_info,
+body.dark .dataTables_paginate {
+    color: var(--text-light) !important;
+}
+
+/* Select de cantidad de registros en datatables en modo oscuro */
+body.dark .dataTables_length select {
+    background-color: var(--card-bg-dark) !important;
+    color: var(--text-light) !important;
+}
+
+/* Input de búsqueda en datatables en modo oscuro */
+body.dark .dataTables_filter input {
+    background-color: var(--card-bg-dark) !important;
+    color: var(--text-light) !important;
+}
+
+/* Botones de paginación en datatables en modo oscuro */
+body.dark .dataTables_paginate .paginate_button {
+    color: var(--text-light) !important;
+    background: transparent !important;
+    border-color: var(--border-dark) !important;
+}
+
+/* Botón de paginación hover en modo oscuro */
+body.dark .dataTables_paginate .paginate_button:hover {
+    background: #3f3f52 !important;
+    border-color: var(--border-dark) !important;
+}
+
+/* Botón de paginación actual en modo oscuro */
+body.dark .dataTables_paginate .paginate_button.current,
+body.dark .dataTables_paginate .paginate_button.current:hover {
+    color: #fff !important;
+    background: #0d6efd !important;
+    border-color: #0d6efd !important;
+}
+
+/* Botón de paginación deshabilitado en modo oscuro */
+body.dark .dataTables_paginate .paginate_button.disabled,
+body.dark .dataTables_paginate .paginate_button.disabled:hover,
+body.dark .dataTables_paginate .paginate_button.disabled:active {
+    color: #6c757d !important;
+    background: transparent !important;
+    border-color: var(--border-dark) !important;
+}
+
+/* Botones de datatables en modo oscuro */
+body.dark .dt-button {
+    background-color: #3f3f52 !important;
+    color: var(--text-light) !important;
+    border-color: var(--border-dark) !important;
+}
