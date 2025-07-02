@@ -5,7 +5,7 @@
 🔗 [https://github.com/Jeisonnore/inventario-almacen-ctgi.git](https://github.com/Jeisonnore/inventario-almacen-ctgi.git)
 
 **Versión en línea (Hostinger):**  
-🌐 [https://gold-zebra-473949.hostingersite.com/](https://gold-zebra-473949.hostingersite.com/)
+🌐firebrick-echidna-717356.hostingersite.com
 
 **Demo en GitHub Pages (solo frontend):**  
 🧪 https://jeisonnore.github.io/inventario-almacen-ctgi/
