@@ -5,8 +5,7 @@
 🔗 [https://github.com/Jeisonnore/inventario-almacen-ctgi.git](https://github.com/Jeisonnore/inventario-almacen-ctgi.git)
 
 **Versión en línea (Hostinger):**  
-🌐firebrick-echidna-717356.hostingersite.com
-
+🌐 http://firebrick-echidna-717356.hostingersite.com
 **Demo en GitHub Pages (solo frontend):**  
 🧪 https://jeisonnore.github.io/inventario-almacen-ctgi/
 
